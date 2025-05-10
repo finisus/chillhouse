@@ -19,35 +19,35 @@ export default function App() {
         <Marquee pauseOnHover={false} className="bg-black/50 [--duration:30s]">
           <img
             src="/memes/tweets/chill-tweet-1.jpg"
-            className="h-[160px] w-auto max-md:h-[120px]"
+            className="h-[160px] w-auto min-w-fit max-md:h-[120px]"
           />
           <img
             src="/memes/tweets/chill-tweet-2.jpeg"
-            className="h-[160px] w-auto max-md:h-[120px]"
+            className="h-[160px] w-auto min-w-fit max-md:h-[120px]"
           />
           <img
             src="/memes/tweets/chill-tweet-3.jpeg"
-            className="h-[160px] w-auto max-md:h-[120px]"
+            className="h-[160px] w-auto min-w-fit max-md:h-[120px]"
           />
           <img
             src="/memes/tweets/chill-tweet-4.jpeg"
-            className="h-[160px] w-auto max-md:h-[120px]"
+            className="h-[160px] w-auto min-w-fit max-md:h-[120px]"
           />
           <img
             src="/memes/tweets/chill-tweet-5.jpeg"
-            className="h-[160px] w-auto max-md:h-[120px]"
+            className="h-[160px] w-auto min-w-fit max-md:h-[120px]"
           />
           <img
             src="/memes/tweets/chill-tweet-6.jpeg"
-            className="h-[160px] w-auto max-md:h-[120px]"
+            className="h-[160px] w-auto min-w-fit max-md:h-[120px]"
           />
           <img
             src="/memes/tweets/chill-tweet-7.jpeg"
-            className="h-[160px] w-auto max-md:h-[120px]"
+            className="h-[160px] w-auto min-w-fit max-md:h-[120px]"
           />
           <img
             src="/memes/tweets/chill-tweet-8.jpeg"
-            className="h-[160px] w-auto max-md:h-[120px]"
+            className="h-[160px] w-auto min-w-fit max-md:h-[120px]"
           />
         </Marquee>
         <MemesBg />
