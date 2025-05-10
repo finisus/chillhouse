@@ -76,5 +76,5 @@ body {
 }
 
 .btn-primary {
-  @apply rounded-xl border border-nero/80 bg-nero/80 px-3 py-1 text-base font-semibold text-blush transition-colors hover:bg-blush/80 hover:text-nero active:bg-blush/80 active:text-nero dark:border-blush/80 dark:bg-blush/80 dark:text-nero dark:hover:bg-nero/80 dark:hover:text-blush dark:active:bg-nero/80 dark:active:text-blush;
+  @apply rounded-lg border border-nero/80 bg-nero/80 px-3 py-1 text-base font-semibold text-blush transition-colors hover:bg-blush/80 hover:text-nero active:bg-blush/80 active:text-nero;
 }
