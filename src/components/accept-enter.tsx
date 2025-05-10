@@ -1,24 +1,27 @@
-import { useState, useRef } from "react";
+import { RefObject } from "react";
+import { useState } from "react";
 
 type AcceptEnterProps = {
   children: React.ReactNode;
-  audioSrc: string;
+  audioRef: RefObject<HTMLAudioElement>;
   buttonText?: string;
   welcomeText?: string;
 };
 
 export default function AcceptEnter({
   children,
-  audioSrc,
+  audioRef,
   buttonText,
   welcomeText,
 }: AcceptEnterProps) {
   const [entered, setEntered] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const handleEnter = () => {
     if (audioRef.current) {
+      audioRef.current.loop = true;
+      audioRef.current.muted = false;
       audioRef.current.volume = 1.0;
+      audioRef.current.preload = "auto";
       audioRef.current
         .play()
         .then(() => {
@@ -41,13 +44,6 @@ export default function AcceptEnter({
       <button onClick={handleEnter} className="btn-primary">
         {buttonText}
       </button>
-      <audio
-        ref={audioRef}
-        src={audioSrc}
-        loop
-        preload="auto"
-        className="hidden"
-      />
     </main>
   );
 }
