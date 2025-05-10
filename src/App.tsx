@@ -57,6 +57,23 @@ export default function App() {
         </SimpleMarquee>
         <MemesBg />
         <section className="mb-[320px] mt-[160px] flex flex-col items-center justify-center max-md:mb-[160px] max-md:mt-[80px]">
+          <div className="mb-4 flex flex-row items-center justify-center gap-3 rounded-lg bg-blush/30 px-3 py-2 backdrop-blur-md">
+            <a
+              href="https://x.com/ChillHouseSOL"
+              target="_blank"
+              className="btn-primary cursor-pointer"
+            >
+              Twitter
+            </a>
+            <a
+              onClick={() => {
+                alert("TG LINK IS IN TG STOP ASKING");
+              }}
+              className="btn-primary cursor-pointer"
+            >
+              Telegram
+            </a>
+          </div>
           <img
             src="/memes/videos/chillhouse-logo-animated.webp"
             className="h-[400px] w-full max-md:h-[100px]"
