@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "proxima-nova";
+  src: url("../_fonts/Proxima_Nova_Semibold.otf");
+}
+
 :root {
   --background: #ecd6c6;
   --foreground: #262626;
@@ -71,5 +76,5 @@ body {
 }
 
 .btn-primary {
-  @apply border-nero/80 bg-nero/80 text-blush hover:bg-blush/80 hover:text-nero active:bg-blush/80 active:text-nero dark:border-blush/80 dark:bg-blush/80 dark:text-nero dark:hover:bg-nero/80 dark:hover:text-blush dark:active:bg-nero/80 dark:active:text-blush rounded-xl border px-3 py-1 text-base font-semibold transition-colors;
+  @apply rounded-xl border border-nero/80 bg-nero/80 px-3 py-1 text-base font-semibold text-blush transition-colors hover:bg-blush/80 hover:text-nero active:bg-blush/80 active:text-nero dark:border-blush/80 dark:bg-blush/80 dark:text-nero dark:hover:bg-nero/80 dark:hover:text-blush dark:active:bg-nero/80 dark:active:text-blush;
 }

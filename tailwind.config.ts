@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import { type Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
+// import { fontFamily } from "tailwindcss/defaultTheme";
 import tailwindcssAnimate from "tailwindcss-animate";
 
 module.exports = {
@@ -11,10 +11,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
-        serif: ["var(--font-alice)", ...fontFamily.serif],
-        mono: ["var(--font-geist-mono)", ...fontFamily.mono],
-        emilysCandy: ["var(--font-emilys-candy)"],
+        // sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        // serif: ["var(--font-alice)", ...fontFamily.serif],
+        // mono: ["var(--font-geist-mono)", ...fontFamily.mono],
+        // emilysCandy: ["var(--font-emilys-candy)"],
+        proximaNova: "proxima-nova",
       },
       colors: {
         blush: "#ecd6c6",
