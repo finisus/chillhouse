@@ -14,6 +14,7 @@ export default function AcceptEnter({
   buttonText,
   welcomeText,
 }: AcceptEnterProps) {
+  // TODO: Change this to false before launch
   const [entered, setEntered] = useState(false);
 
   const handleEnter = () => {
@@ -39,11 +40,23 @@ export default function AcceptEnter({
   }
 
   return (
-    <main className="flex min-h-svh w-svw flex-col items-center justify-center font-proximaNova">
-      <h5 className="px-2 py-4 text-2xl">{welcomeText}</h5>
-      <button onClick={handleEnter} className="btn-primary">
-        {buttonText}
-      </button>
+    <main className="relative grid h-svh w-svw grid-cols-1 grid-rows-5 overflow-hidden font-proximaNova">
+      <img
+        src="/memes/images/touch-2.jpg"
+        className="row-span-2 h-full w-full"
+      />
+      <div className="flex flex-col items-center justify-center bg-black px-2 py-2">
+        <h5 className="px-2 py-4 text-center text-2xl text-white">
+          {welcomeText}
+        </h5>
+        <button onClick={handleEnter} className="btn-primary">
+          {buttonText}
+        </button>
+      </div>
+      <img
+        src="/memes/images/touch-1.jpg"
+        className="row-span-2 h-full w-full"
+      />
     </main>
   );
 }

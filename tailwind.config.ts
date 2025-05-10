@@ -15,19 +15,31 @@ module.exports = {
         // serif: ["var(--font-alice)", ...fontFamily.serif],
         // mono: ["var(--font-geist-mono)", ...fontFamily.mono],
         // emilysCandy: ["var(--font-emilys-candy)"],
-        proximaNova: "proxima-nova",
+        proximaNova: "proxima-nova-semibold",
+        proximaNovaBold: "proxima-nova-extrabold",
       },
       colors: {
         blush: "#ecd6c6",
         nero: "#262626",
       },
       animation: {
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         "sun-moon": "sun-moon 0.5s cubic-bezier(0, 0, 0, 1.25) forwards",
         typewriter: "typewriter 1.75s steps(35) 0.25s forwards",
         caret:
           "typewriter 1.75s steps(35) 0.25s forwards, blink 1s steps(35) infinite 2s",
       },
       keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+
         "sun-moon": {
           "0%": { transform: "scale(1)" },
           "100%": { transform: "scale(0.65)" },
