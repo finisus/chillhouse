@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Marquee } from "./components/marquee";
+import { SimpleMarquee } from "./components/simple-marquee";
 import MemesBg from "./components/memes-bg";
 import AcceptEnter from "./components/accept-enter";
 import Footer from "./components/footer";
@@ -16,7 +16,12 @@ export default function App() {
       audioRef={audioRef}
     >
       <main className="relative flex min-h-svh w-svw flex-col items-stretch justify-start gap-[320px] font-proximaNova max-md:gap-[160px]">
-        <Marquee pauseOnHover={false} className="bg-black/50 [--duration:30s]">
+        <SimpleMarquee
+          speed={150}
+          pauseOnHover={false}
+          gapRem={1}
+          className="bg-black/50"
+        >
           <img
             src="/memes/tweets/chill-tweet-1.jpg"
             className="h-[160px] w-auto min-w-fit max-md:h-[120px]"
@@ -49,7 +54,7 @@ export default function App() {
             src="/memes/tweets/chill-tweet-8.jpeg"
             className="h-[160px] w-auto min-w-fit max-md:h-[120px]"
           />
-        </Marquee>
+        </SimpleMarquee>
         <MemesBg />
         <section className="mb-[320px] mt-[160px] flex flex-col items-center justify-center max-md:mb-[160px] max-md:mt-[80px]">
           <img
