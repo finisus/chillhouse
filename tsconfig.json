@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    /* Projects */
+    "incremental": true,
+
+/* Language and Environment */
+    "target": "ES2022",
+    "lib": ["ES2022", "dom", "dom.iterable"],
+    "moduleDetection": "force",
+    "jsx": "preserve",
+
+    /* Modules */
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    // "paths": {
+    //   "@/*": ["./src/*"]
+    // }, 
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+
+    /* JavaScript Support */
+    "allowJs": true,
+    "checkJs": true,
+
+    /* Emit */
+    "noEmit": true,
+
+    /* Type Checking */
+    "strict": true,
+
+    /* Completedness */
+    "skipLibCheck": true
+  },
+  "include": [
+    "eslint.config.mjs",
+    "vite-env.d.ts", 
+    "**/*.ts", 
+    "**/*.tsx", 
+    "**/*.cjs",
+    "**/*.js", 
+    "postcss.config.js",
+    "vite.config.ts"
+  ],
+  "exclude": ["node_modules"]
+}
