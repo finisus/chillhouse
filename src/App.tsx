@@ -3,6 +3,7 @@ import { SimpleMarquee } from "./components/simple-marquee";
 import MemesBg from "./components/memes-bg";
 import AcceptEnter from "./components/accept-enter";
 import Footer from "./components/footer";
+import { env } from "./config/env";
 
 export default function App() {
   const audioRef = useRef(
@@ -59,7 +60,7 @@ export default function App() {
         <section className="mb-[320px] mt-[160px] flex flex-col items-center justify-center max-md:mb-[160px] max-md:mt-[80px]">
           <div className="mb-4 flex flex-row items-center justify-center gap-3 rounded-lg bg-blush/30 px-3 py-2 backdrop-blur-md">
             <a
-              href="https://x.com/ChillHouseSOL"
+              href={env.VITE_TOKEN_TWITTER}
               target="_blank"
               className="btn-primary cursor-pointer"
             >

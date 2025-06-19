@@ -14,7 +14,6 @@ export default function AcceptEnter({
   buttonText,
   welcomeText,
 }: AcceptEnterProps) {
-  // TODO: Change this to false before launch
   const [entered, setEntered] = useState(false);
 
   const handleEnter = () => {
@@ -26,7 +25,7 @@ export default function AcceptEnter({
       audioRef.current
         .play()
         .then(() => {
-          console.log("audio playing...");
+          // console.log("audio playing...");
         })
         .catch((err) => {
           console.error("Audio autoplay failed:", err);
