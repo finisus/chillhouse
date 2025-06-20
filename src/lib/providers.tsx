@@ -23,18 +23,17 @@ const ThemedToaster = (props: ToasterProps) => {
       closeButton={false}
       toastOptions={{
         style: {
-          background: "#ecd6c6bf",
+          background: "#efefefbf",
           backdropFilter: "blur(4px)",
           WebkitBackdropFilter: "blur(4px)",
-          borderRadius: "4px",
-          border: "1px solid #ecd6c6",
+          borderRadius: "0px",
+          border: "1px solid #000000",
           paddingTop: "12px",
           paddingBottom: "12px",
           paddingLeft: "12px",
           paddingRight: "12px",
-          fontSize: 12,
-          fontFamily: "monospace",
-          fontWeight: "bold",
+          fontSize: 16,
+          fontFamily: "proxima-nova-semibold",
           color: "#000000",
         },
       }}

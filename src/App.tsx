@@ -1,22 +1,26 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { SimpleMarquee } from "./components/simple-marquee";
 import MemesBg from "./components/memes-bg";
-import AcceptEnter from "./components/accept-enter";
+import Landing from "./components/landing";
 import Footer from "./components/footer";
+import { Button } from "./components/ui/button";
 import { env } from "./config/env";
+import VideoPlayer from "./components/video-player";
 
 export default function App() {
-  const audioRef = useRef(
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+  const musicRef = useRef(
     new Audio("/memes/songs/vid1-w-Hustler-Sorrow_Sky.mp3"),
   );
 
   return (
-    <AcceptEnter
+    <Landing
       welcomeText="Gotta go through shit to be some shit"
       buttonText="Touch ts inappropriately to enter"
-      audioRef={audioRef}
+      musicRef={musicRef}
+      setIsMusicPlaying={setIsMusicPlaying}
     >
-      <main className="relative flex min-h-svh w-svw flex-col items-stretch justify-start gap-[320px] font-proximaNova max-md:gap-[160px]">
+      <main className="relative flex min-h-svh w-svw flex-col items-stretch justify-start gap-[320px] font-sans max-md:gap-[160px]">
         <SimpleMarquee
           speed={150}
           pauseOnHover={false}
@@ -58,21 +62,28 @@ export default function App() {
         </SimpleMarquee>
         <MemesBg />
         <section className="mb-[320px] mt-[160px] flex flex-col items-center justify-center max-md:mb-[160px] max-md:mt-[80px]">
-          <div className="mb-4 flex flex-row items-center justify-center gap-3 rounded-lg bg-blush/30 px-3 py-2 backdrop-blur-md">
-            <a
-              href={env.VITE_TOKEN_TWITTER}
-              target="_blank"
-              className="btn-primary cursor-pointer"
-            >
-              Twitter
+          <div className="mb-8 flex flex-row items-center justify-center gap-4">
+            <a href={env.VITE_TOKEN_TWITTER} target="_blank">
+              <Button
+                variant="default"
+                size="default"
+                className="font-proximaNovaBold text-base text-yellow-300"
+              >
+                Twitter
+              </Button>
             </a>
             <a
               onClick={() => {
                 alert("TG LINK IS IN TG STOP ASKING");
               }}
-              className="btn-primary cursor-pointer"
             >
-              Telegram
+              <Button
+                variant="default"
+                size="default"
+                className="font-proximaNovaBold text-base text-yellow-300"
+              >
+                Telegram
+              </Button>
             </a>
           </div>
           <img
@@ -80,28 +91,20 @@ export default function App() {
             className="h-[400px] w-full max-md:h-[100px]"
           />
         </section>
+
         <section
-          id="video1"
-          className="flex flex-col items-center justify-center"
+          id="video-player"
+          aria-label="Video Player"
+          className="flex flex-col items-center justify-center pb-32"
         >
-          <video
-            controls={true}
-            src="/memes/videos/vid1-min.mp4"
-            className="h-[432px] w-[768px] border-4 border-yellow-300 max-md:h-[144px] max-md:w-[256px]"
-          />
-        </section>
-        <section
-          id="video2"
-          className="flex flex-col items-center justify-center"
-        >
-          <video
-            controls={true}
-            src="/memes/videos/vid2-min.mp4"
-            className="h-[432px] w-[768px] border-4 border-yellow-300 max-md:h-[144px] max-md:w-[256px]"
+          <VideoPlayer
+            musicRef={musicRef}
+            isMusicPlaying={isMusicPlaying}
+            setIsMusicPlaying={setIsMusicPlaying}
           />
         </section>
         <Footer />
       </main>
-    </AcceptEnter>
+    </Landing>
   );
 }

@@ -12,9 +12,10 @@
     /* Modules */
     "module": "ESNext",
     "moduleResolution": "bundler",
-    // "paths": {
-    //   "@/*": ["./src/*"]
-    // }, 
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }, 
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "isolatedModules": true,

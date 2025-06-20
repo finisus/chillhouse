@@ -1,5 +1,6 @@
-import { defineConfig } from "vite";
+import path from "path";
 import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 // https://vite.dev/config/
@@ -45,8 +46,14 @@ export default defineConfig({
       gif: {},
       webp: {
         // https://sharp.pixelplumbing.com/api-output#webp
-        lossless: true,
+        quality: 25,
+        lossless: false,
       },
     }),
   ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 });

@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 import { type Config } from "tailwindcss";
-// import { fontFamily } from "tailwindcss/defaultTheme";
+import { fontFamily } from "tailwindcss/defaultTheme";
 import tailwindcssAnimate from "tailwindcss-animate";
 
 module.exports = {
+  darkMode: ["class"],
   future: {
     hoverOnlyWhenSupported: true,
   },
@@ -11,16 +12,50 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        // sans: ["var(--font-geist-sans)", ...fontFamily.sans],
-        // serif: ["var(--font-alice)", ...fontFamily.serif],
-        // mono: ["var(--font-geist-mono)", ...fontFamily.mono],
-        // emilysCandy: ["var(--font-emilys-candy)"],
-        proximaNova: "proxima-nova-semibold",
+        sans: ["proxima-nova-semibold", ...fontFamily.sans],
         proximaNovaBold: "proxima-nova-extrabold",
       },
+      fontWeight: {
+        base: "600",
+        heading: "800",
+      },
       colors: {
-        blush: "#ecd6c6",
-        nero: "#262626",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        "secondary-background": "hsl(var(--secondary-background))",
+        main: {
+          DEFAULT: "hsl(var(--main))",
+          foreground: "hsl(var(--main-foreground))",
+        },
+        border: "hsl(var(--border))",
+        overlay: "hsl(var(--overlay))",
+        ring: "hsl(var(--ring))",
+        chart: {
+          "1": "var(--chart-1)",
+          "2": "var(--chart-2)",
+          "3": "var(--chart-3)",
+          "4": "var(--chart-4)",
+          "5": "var(--chart-5)",
+        },
+      },
+      boxShadow: {
+        shadow: "4px 4px 0px 0px hsl(var(--border))",
+        none: "none",
+      },
+      spacing: {
+        boxShadowX: "4px",
+        boxShadowY: "4px",
+        reverseBoxShadowX: "-4px",
+        reverseBoxShadowY: "-4px",
+      },
+      translate: {
+        boxShadowX: "4px",
+        boxShadowY: "4px",
+        reverseBoxShadowX: "-4px",
+        reverseBoxShadowY: "-4px",
+      },
+      borderRadius: {
+        base: "0px",
       },
       animation: {
         marquee: "marquee var(--duration) linear infinite",
@@ -32,17 +67,28 @@ module.exports = {
       },
       keyframes: {
         marquee: {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+          from: {
+            transform: "translateX(0)",
+          },
+          to: {
+            transform: "translateX(calc(-100% - var(--gap)))",
+          },
         },
         "marquee-vertical": {
-          from: { transform: "translateY(0)" },
-          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+          from: {
+            transform: "translateY(0)",
+          },
+          to: {
+            transform: "translateY(calc(-100% - var(--gap)))",
+          },
         },
-
         "sun-moon": {
-          "0%": { transform: "scale(1)" },
-          "100%": { transform: "scale(0.65)" },
+          "0%": {
+            transform: "scale(1)",
+          },
+          "100%": {
+            transform: "scale(0.65)",
+          },
         },
         typewriter: {
           to: {
