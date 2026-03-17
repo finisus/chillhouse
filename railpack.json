@@ -1,0 +1,11 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "packages": {
+    "node": "24"
+  },
+  "steps": {
+    "preBuild": {
+      "commands": ["npm install -g corepack@latest", "corepack enable"]
+    }
+  }
+}

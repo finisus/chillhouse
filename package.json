@@ -1,13 +1,12 @@
 {
   "name": "chillhouse",
   "private": true,
-  "version": "0.1.0",
   "author": "Finisus",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build": "vite build && tsc",
+    "serve": "vite preview",
+    "lint": "eslint"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

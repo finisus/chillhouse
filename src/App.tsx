@@ -13,6 +13,10 @@ export default function App() {
     new Audio("/memes/songs/vid1-w-Hustler-Sorrow_Sky.mp3"),
   );
 
+  if (import.meta.env.VITE_LAUNCH_MODE === "maintenance") {
+    return null;
+  }
+
   return (
     <Landing
       welcomeText="Gotta go through shit to be some shit"

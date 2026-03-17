@@ -5,15 +5,14 @@ import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 // https://vite.dev/config/
 export default defineConfig({
-  preview: {
-    host: true,
-    port: 4173,
-    allowedHosts: [
-      "kg8kwkcs888kcgg8sgc4ckoo.69.62.113.99.sslip.io",
-      "www.chillhouse.meme",
-      "chillhouse.meme",
-    ],
-  },
+  // preview: {
+  //   host: true,
+  //   port: 4173,
+  //   allowedHosts: [
+  //     "www.chillhouse.meme",
+  //     "chillhouse.meme",
+  //   ],
+  // },
   plugins: [
     react(),
     ViteImageOptimizer({
